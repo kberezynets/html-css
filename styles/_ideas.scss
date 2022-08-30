@@ -1,0 +1,141 @@
+// Ideas
+
+.ideas_box {
+    width: 940px;
+    display: grid;
+    margin: 0 auto;
+    grid-template-columns: 300px 300px 300px;
+    grid-template-rows: 310px 310px 310px;
+    row-gap: 20px;
+    column-gap: 20px;
+
+    @include text_style(22px, bold, 27px, normal);
+    color: $white-color;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.ideas_flex {
+    @include display_flex(column, space-around);
+}
+
+.sport {
+    grid-column: 1/2;
+    grid-row: 1/1;
+    background-image: url('https://images2.imgbox.com/7d/5d/psT2qRrp_o.png');
+    box-shadow: inset 0px 0px 0 150px rgba(0, 0, 0, 0.2);
+}
+
+.health {
+    grid-column: 2/3;
+    grid-row: 1/1;
+    background-image: url('https://images2.imgbox.com/f8/bb/RVpXJRbV_o.png');
+    box-shadow: inset 0px 0px 0 150px rgba(0, 0, 0, 0.2);
+}
+
+.extreme {
+    grid-column: 3/4;
+    grid-row: 1/1;
+    background-image: url('https://images2.imgbox.com/cc/e8/b8Kadozm_o.png');
+    box-shadow: inset 0px 0px 0 150px rgba(0, 0, 0, 0.2);
+    padding: 0 40px;
+}
+
+.games {
+    grid-column: 1/2;
+    grid-row: 2/2;
+    background-image: url('https://images2.imgbox.com/01/d1/FuaVR7sT_o.png');
+    box-shadow: inset 0px 0px 0 150px rgba(0, 0, 0, 0.2);
+}
+
+.culture {
+    grid-column: 2/4;
+    grid-row: 2/2;
+    background-image: url('https://images2.imgbox.com/d9/ab/7sV2tclb_o.png');
+    box-shadow: inset 0px 0px 0 150px rgba(0, 0, 0, 0.2);
+}
+
+.relax {
+    grid-column: 1/3;
+    grid-row: 3/3;
+    background-image: url('https://images2.imgbox.com/54/77/7i9TKv2K_o.png');
+    box-shadow: inset 0px 0px 0 150px rgba(0, 0, 0, 0.2);
+}
+
+.travel {
+    grid-column: 3/4;
+    grid-row: 3/3;
+    background-image: url('https://images2.imgbox.com/51/33/YutgsLdf_o.png');
+    box-shadow: inset 0px 0px 0 150px rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 1439px) and (min-width: 768px) {
+    .ideas_box {
+        width: 748px;
+        grid-template-columns: 236px 236px 236px;
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 320px) {
+    .margin_mobile {
+        margin-right: 20px;
+    }
+
+    .ideas_box {
+        width: 300px;
+        display: grid;
+        grid-template-columns: 300px;
+        grid-template-rows: repeat(7, 120px);
+        row-gap: 10px;
+        margin: 17px auto 0;
+    }
+
+    .sport, 
+    .health,
+    .extreme,
+    .games,
+    .culture,
+    .relax,
+    .travel {
+        grid-column: 1/2;
+        padding: 0 47px;
+    }
+
+    .sport {
+        grid-row: 1/1;
+        background-image: url('https://images2.imgbox.com/ab/23/E2ky3YR6_o.png');
+        padding-bottom: 23px;
+    }
+
+    .health {
+        grid-row: 2/2;
+        background-image: url('https://images2.imgbox.com/e0/d9/tkPeu4Sx_o.png');
+    }
+
+    .extreme {
+        grid-row: 3/3;
+        background-image: url('https://images2.imgbox.com/93/22/rDCDSZup_o.png');
+    }
+
+    .games {
+        grid-row: 4/4;
+        background-image: url('https://images2.imgbox.com/22/bc/JdmsJAvp_o.png');
+    }
+
+    .culture {
+        grid-row: 5/5;
+        background-image: url('https://images2.imgbox.com/2b/17/feB2KlAe_o.png');
+        padding: 0 10px;
+    }
+
+    .relax {
+        grid-row: 6/6;
+        background-image: url('https://images2.imgbox.com/fa/41/FP6DCbRb_o.png');
+        padding: 0 10px;
+    }
+
+    .travel {
+        grid-row: 7/7;
+        background-image: url('https://images2.imgbox.com/14/2c/pqe1Xzdg_o.png');
+    }
+}

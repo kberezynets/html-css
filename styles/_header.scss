@@ -1,0 +1,193 @@
+body {
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+h1 {
+    @include text_style(52px, bold, 63px, normal);
+    text-transform: uppercase;
+}
+
+.Roboto {
+    font-family: 'Roboto-Light', Helvetica, sans-serif;
+}
+
+main {
+    color: $gray-color;
+}
+
+section {
+    padding: 90px 235px 0 250px;
+    @include display_flex(column, space-between);
+}
+
+h2 {
+    font-family: 'Montserrat', Helvetica, sans-serif;
+    @include text_style(26px, bold, 32px, normal);
+    color: $gray-color;
+    text-align: center;
+    margin: 0 0 35px 0px;
+}
+
+
+
+header {
+    color: $white-color;
+    margin: 0 auto;
+    display: block;
+    position: relative;
+}
+
+.header_photo {
+    @include box(1440px, 700px);
+    background-image: url('https://images2.imgbox.com/eb/e5/S8xcIAYz_o.png');
+}
+
+.pic_location {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.orange-black {
+    @include box(100%, 100%);
+    padding: 41px 291px 224px 248px;
+    background: linear-gradient(360deg, rgba(255, 78, 80, 0.1) 0%, rgba(249, 212, 35, 0.1) 100%);
+    mix-blend-mode: normal;
+    box-shadow: inset 0px 0px 0 350px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+.top {
+    @include display_flex(row, space-between);
+    @include text_style(14px, normal, 32px, 1px);
+
+    &__logo {
+        font-family: 'Montserrat', Helvetica, sans-serif;
+        @include text_style(20px, bold, 32px, 1px);
+        text-transform: uppercase;
+    }
+
+    &__access {
+        @include display_flex(inherit, inherit);
+
+        &_login {
+            margin-top: 3px;
+        }
+
+        &_signin {
+            margin-left: 19px;
+            @include button (90px, $white-color);
+        }
+    }
+}
+
+.container {
+    width: fit-content;
+    height: fit-content;
+    margin: 0 auto;
+}
+
+.top_text {
+    padding: 148px 194px 0 237px;
+    text-align: center;
+}
+
+.Roboto_top {
+    font-size: 24px;
+    margin: 28px auto 33px;
+}
+
+.button_red {
+    @include button (225px, $red-color);
+    @include text_style(14px, bold, 36px, normal);
+    background-color: $red-color;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1439px) and (min-width: 768px) {
+    section {
+        padding: 94px 10px 0 10px;
+    }
+
+    h2 {
+        @include text_style(22px, bold, 27px, normal);
+        margin-left: 15px;
+    }
+   
+    .header_photo {
+        @include box(100%, 700px);
+        min-width: 768px;
+    }
+
+    .orange-black {
+        padding: 41px 50px 224px 48px;
+    }
+
+    .top_text {
+        padding: 148px 99px 0 101px;
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 320px) {
+    
+    h1 {
+        @include text_style(30px, bold, 37px, normal);
+    }
+
+    section {
+        padding: 35px 10px 0 10px;
+        margin: 0 auto;
+        width: fit-content;
+    }
+
+    h2 {
+        @include text_style(22px, bold, 27px, normal);
+        margin: 0 0 15px 5px;
+    }
+
+    .header_photo {
+        @include box(100%, 540px);
+        background-image: url('https://images2.imgbox.com/45/f8/Uyby7sdu_o.png');
+        min-width: 320px;
+        border-left: 10px solid white;
+    }
+
+    .orange-black {
+        padding: 21px 10px 153px 20px;
+    }
+
+    .top {
+        @include display_flex(column-reverse, space-between);
+        align-items: center;
+
+        &__logo {
+            margin: 93px 0 0 6px;
+            @include text_style(20px, bold, 32px, normal);
+        }
+
+        &__access {
+            @include display_flex(row, space-around);
+            width: fit-content;
+            margin-right: 15px;
+
+            &_signin {
+                margin-left: 14px;
+            }
+        }
+    }
+
+    .top_text {
+        padding: 24px 0 0;
+    }
+
+    .Roboto_top {
+        @include text_style(18px, normal, 25px, normal);
+        margin: 6px auto 13px;
+    }
+
+    .button_red {
+        @include button (276px, $red-color);
+        letter-spacing: normal;
+    }
+}

@@ -1,0 +1,101 @@
+footer {
+    border-top: 2px solid $red-color;
+}
+
+.footer_flex {
+    @include display_flex(row, space-between);
+    width: 65%;
+    margin: 36px auto;
+}
+
+.footer__logo {
+    @include text_style(16px, normal, 20px, normal);
+    text-transform: uppercase;
+    color: $red-color;
+}
+
+.footer__header {
+    @include text_style(14px, bold, 17px, normal);
+    margin: 3px 53px 10px 0;
+}
+
+ul {
+    font-family: 'Roboto-Light', Helvetica, sans-serif;
+    @include text_style(14px, normal, 26px, normal);
+    color: $nine-gray-color;
+}
+
+.designed {
+    @include text_style(11px, normal, 12px, normal);
+    text-transform: uppercase;
+    color: $c-gray-color;
+    text-align: right;
+    margin: 2px -18px 0 0;
+}
+
+.Areto_logo {
+    @include box(110px, 24px);
+    background-image: url('https://images2.imgbox.com/1a/c6/63UDSJ0F_o.png');
+    margin: 10px 0 0 115px;
+}
+
+@media screen and (max-width: 1439px) and (min-width: 768px) {
+    .footer_flex {
+        width: 90%;
+    }
+
+    .footer__logo {
+        margin-right: 48px;
+    }
+
+    .footer__header {
+        margin: 2px 0px 10px 0;
+    }
+
+    .designed {
+        margin: 2px -20px 0 58px;
+    }
+
+    .Areto_logo {
+        margin: 9px 4px 0 0px;
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 320px) {
+    .footer_flex {
+        @include display_flex(column, space-between);
+        align-items: center;
+        width: 80%;
+        margin: 19px auto;
+        padding-left: 15px;
+    }
+    
+    .footer__logo {
+        margin-bottom: 5px;
+    }
+    
+    .footer__header {
+        text-align: center;
+        margin: 8px auto 0;
+    }
+
+    .menu-text{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    ul{
+        display: inline;
+        margin: 0 6px;
+    }
+
+    .designed {
+        text-align: center;
+        margin: 14px 0 0;
+    }
+    
+    .Areto_logo {
+        margin: 7px 0 0;
+    }
+}

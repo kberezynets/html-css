@@ -1,0 +1,82 @@
+@import './base/base';
+@import './base/mixin';
+@import './base/variables';
+
+@import './header';
+@import './steps';
+@import './partners';
+@import './ideas';
+@import './footer';
+
+
+
+// Search
+
+.interest_hi {
+    margin: 15px auto 25px;
+    @include text_style(18px, normal, 14px, 0.01px);
+    color: $lgray-color;
+    padding-left: 8px;
+}
+
+.interest_flex {
+    @include display_flex(row, space-between);
+    width: fit-content;
+    margin: 0 auto 100px;
+}
+
+.interest_form {
+    @include text_style(14px, normal, 36px, normal);
+    width: 300px;
+    border-radius: 3px;
+    border: 1px solid #D4D4D4;
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.073313);
+    color: $nine-gray-color;
+    margin: 0 8px;
+}
+
+.button_search {
+    @include button(172px, $red-color);
+    @include text_style(14px, bold, 36px, normal);
+    color: $white-color;
+    background-color: $red-color;
+}
+
+@media screen and (max-width: 1439px) and (min-width: 768px) {
+
+    .interest_hi {
+        margin: 19px auto 25px;
+        padding-left: 25px;
+    }
+
+    .interest_form {
+        margin: 0 14px;
+    }
+}
+
+@media screen and (max-width: 767px) and (min-width: 320px) {
+
+    .interest_hi {
+        margin: 3px auto 16px;
+    }
+
+    .interest_flex {
+        @include display_flex(column, space-between);
+        width: fit-content;
+        margin: 0 auto 40px;
+    }
+
+    form{
+        margin-bottom: 10px;
+    }
+
+    .interest_form {
+        width: 280px;
+    }
+
+    .button_search {
+        @include button(280px, $red-color);
+        margin: 0 auto;
+        padding: 1px 0 0 10px;
+    }
+}
